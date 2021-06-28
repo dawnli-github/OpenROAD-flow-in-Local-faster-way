@@ -57,7 +57,8 @@ RUN sudo cp /usr/include/tcl8.6/*.h /usr/include/
 # If you have graphic interface
 # RUN sudo apt install klayout
 RUN sudo ln -s /usr/lib/x86_64-linux-gnu/libtcl8.6.so /usr/lib/x86_64-linux-gnu/libtcl8.5.so
-RUN sudo apt install libreadline6-dev bison flex libffi-dev cmake libboost-all-dev swig libspdlog-dev libeigen3-dev -y
+RUN sudo apt install clang libreadline6-dev bison flex libffi-dev cmake libboost-all-dev swig libspdlog-dev libeigen3-dev -y
+RUN sudo apt-get install qt5-default qtcreator -y
 # Build Lemon
 RUN cd $Dawnli_dl
 RUN wget http://lemon.cs.elte.hu/pub/sources/lemon-1.3.1.tar.gz
